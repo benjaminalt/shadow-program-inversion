@@ -1,0 +1,9 @@
+{
+  "learning_rate": 5e-5,
+  "epochs": 50,
+  "batch_size": 64,
+  "seq_len": 250,
+  "hidden_size": 128,
+  "num_layers": 3,
+  "dropout_p": 0.3
+}

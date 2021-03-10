@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<rtde_config>
+	<recipe key="out">
+		<field name="timestamp" type="DOUBLE"/>
+		<field name="actual_q" type="VECTOR6D"/>
+    </recipe>
+</rtde_config>

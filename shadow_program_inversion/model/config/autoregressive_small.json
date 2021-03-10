@@ -1,0 +1,6 @@
+{
+  "learning_rate": 1e-5,
+  "epochs": 50,
+  "batch_size": 64,
+  "lstm_hidden_size": 256
+}

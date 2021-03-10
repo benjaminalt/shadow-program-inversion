@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<rtde_config>
+	<recipe key="out">
+		<field name="timestamp" type="DOUBLE"/>
+		<field name="actual_TCP_pose" type="VECTOR6D"/>
+		<field name="actual_TCP_force" type="VECTOR6D"/>
+		<field name="runtime_state" type="UINT32"/>
+    </recipe>
+</rtde_config>
