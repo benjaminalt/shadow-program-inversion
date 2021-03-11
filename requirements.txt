@@ -1,13 +1,15 @@
 tables~=3.6.1
 torch~=1.7.0
 natsort~=7.1.1
-rtde~=1.0
 numpy~=1.19.5
 pyquaternion~=0.9.9
 roslibpy~=1.2.0
 matplotlib~=3.3.4
 scipy~=1.5.4
 tqdm~=4.58.0
+setuptools~=54.0.0
+py7zr~=0.14.1
+requests~=2.25.1
 
 git+git://github.com/benjaminalt/pytorch-utils@icra-2021
 git+git://github.com/benjaminalt/pyrobolearn@icra-2021
