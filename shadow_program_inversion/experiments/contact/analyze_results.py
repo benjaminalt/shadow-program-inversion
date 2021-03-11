@@ -6,7 +6,7 @@ Print the median absolute deviation of the measured contact forces from the inte
 Optionally plot the force trajectories before and after parameter optimization.
 
 Example:
-    $ python analyze_results.py /home/demo/shadow-program-inversion/results --plot-series=urscript_pcb_5N
+    $ python analyze_results.py --plot-series=urscript_pcb_5N
 """
 
 import argparse
@@ -20,6 +20,7 @@ from matplotlib.lines import Line2D
 
 from shadow_program_inversion.utils.io import load_data_file
 from shadow_program_inversion.utils.sequence_utils import unpad_padded_sequence
+import shadow_program_inversion.utils.config as cfg
 
 DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, os.pardir, "data"))
 
@@ -56,7 +57,7 @@ def plot_forces_before_after(trajectories_before: np.ndarray, trajectories_after
 def main(args):
     results = {}
 
-    for filename in os.listdir(args.results_dir):
+    for filename in os.listdir(cfg.RESULTS_DIR):
         match = re.match(r"([a-z]+)_([a-z]+)_([0-9\.]+)N.npy", filename)
         goal_force = float(match.group(3))
         program_type = match.group(1)
@@ -83,6 +84,5 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument("results_dir", type=str, help="Path to dir containing measured trajectories, e.g. '/home/demo/shadow-program-inversion/results'")
     parser.add_argument("--plot-series", type=str, help="Name of the series to plot, e.g. 'urscript_pcb_5N'")
     main(parser.parse_args())
